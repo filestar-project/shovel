@@ -17,6 +17,7 @@ export const JWT_SECRET = process.env.JWT_SECRET;
 export const TEXTILE_HUB_KEY = process.env.TEXTILE_HUB_KEY;
 export const TEXTILE_HUB_SECRET = process.env.TEXTILE_HUB_SECRET;
 export const TEXTILE_SLACK_WEBHOOK_KEY = process.env.TEXTILE_SLACK_WEBHOOK_KEY;
+export const TEXTILE_HUB_STAGING_HOST = process.env.TEXTILE_HUB_STAGING_HOST;
 export const DOWNLOAD_REDIS_HOST = process.env.DOWNLOAD_REDIS_HOST;
 export const DOWNLOAD_REDIS_PASSWORD = process.env.DOWNLOAD_REDIS_PASSWORD;
 export const DOWNLOAD_REDIS_PORT = process.env.DOWNLOAD_REDIS_PORT;
