@@ -5,9 +5,9 @@ export const SOURCE = process.env.SOURCE;
 
 // NOTE(jim):
 // In production we don't use .env and manage secrets another way.
-if (!IS_PRODUCTION) {
+// if (!IS_PRODUCTION) {
   require("dotenv").config();
-}
+// }
 
 export const POSTGRES_ADMIN_PASSWORD = process.env.POSTGRES_ADMIN_PASSWORD;
 export const POSTGRES_ADMIN_USERNAME = process.env.POSTGRES_ADMIN_USERNAME;
