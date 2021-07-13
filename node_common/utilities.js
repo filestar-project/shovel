@@ -20,6 +20,11 @@ const TEXTILE_KEY_INFO = {
   secret: Environment.TEXTILE_HUB_SECRET,
 };
 
+const TEXTILE_HOST = {
+  host: Environment.TEXTILE_HUB_STAGING_HOST,
+  debug: true,
+};
+
 export const decodeCookieToken = (token) => {
   try {
     const decoded = JWT.verify(token, Environment.JWT_SECRET);
@@ -67,7 +72,7 @@ export const getBucketAPIFromUserToken = async ({ user, bucketName, encrypted = 
   const token = user.data.tokens.api;
   const name = Strings.isEmpty(bucketName) ? BUCKET_NAME : bucketName;
   const identity = await PrivateKey.fromString(token);
-  let buckets = await Buckets.withKeyInfo(TEXTILE_KEY_INFO, { debug: true });
+  let buckets = await Buckets.withKeyInfo(TEXTILE_KEY_INFO, TEXTILE_HOST);
 
   await buckets.getToken(identity);
 
