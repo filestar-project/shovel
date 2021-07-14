@@ -22,7 +22,6 @@ const TEXTILE_KEY_INFO = {
 
 const TEXTILE_HOST = {
   host: Environment.TEXTILE_HUB_STAGING_HOST,
-  debug: true,
 };
 
 export const decodeCookieToken = (token) => {
